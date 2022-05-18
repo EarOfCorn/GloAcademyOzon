@@ -1,7 +1,12 @@
-const second = () => {
-	const cartBtn = document.querySelector("#cart");
+import getData from "./getData";
+import postData from "./postData";
 
-	console.log(cartBtn);
+const second = () => {
+	const cartBtn = document.getElementById("cart");
+
+	getData().then((data) => {
+		console.log(data);
+	});
 };
 
 export default second;
